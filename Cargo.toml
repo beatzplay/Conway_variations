@@ -1,0 +1,25 @@
+[package]
+name = "Conway_variations"
+version = "0.1.0"
+edition = "2024"
+
+[workspace]
+
+[dependencies]
+chrono = "0.4.45"
+clap = {version = "4.6.7", features = ["derive"]}
+csv = "1.4.0"
+indicatif = "0.18.6"
+minifb = "0.29.0"
+pixels = "0.17.2"
+rand = "0.10.3"
+rayon = "1.12.0"
+serde = { version ="1.0.229", features =["serde_derive"]}
+serde_json = "1.0.154"
+uuid = { version = "1.29.2", features = ["v4"] }
+cuda-device = { git = "https://github.com/NVIDIA/cuda-rust.git" }
+cuda-host = { git = "https://github.com/NVIDIA/cuda-rust.git" }
+# Shared host-side runtime. It has to come from the same repository as
+# cuda-host, which depends on it; a crates.io copy is a second cuda-core.
+cuda-core = { git = "https://github.com/NVIDIA/cuda-rust.git" }
+nop-json = "2.1.0"
